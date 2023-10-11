@@ -1,7 +1,8 @@
 import 'package:bookly_mvvm/core/utils/my_assets.dart';
+import 'package:bookly_mvvm/features/home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookly_mvvm/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -11,9 +12,13 @@ class HomeViewBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
-        child: const Column(
+        child: Column(
           children: [
-            CustomAppBar(),
+            const CustomAppBar(),
+            SizedBox(
+              height: 20.h,
+            ),
+            const FeaturedBooksListView(),
           ],
         ),
       ),
@@ -21,26 +26,22 @@ class HomeViewBody extends StatelessWidget {
   }
 }
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+class FeaturedBooksListView extends StatelessWidget {
+  const FeaturedBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Image.asset(
-          MyAssets.kLogo,
-          height: 20.h,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            FontAwesomeIcons.magnifyingGlass,
-          ),
-          iconSize: 26.sp,
-        )
-      ],
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.25,
+      child: ListView.builder(
+          itemCount: 10,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: FeaturedBookItem(),
+            );
+          }),
     );
   }
 }
