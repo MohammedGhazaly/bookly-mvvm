@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static ThemeData mainTheme = ThemeData(
-    scaffoldBackgroundColor: MyColors.primaryColor,
+    scaffoldBackgroundColor: MyColors.kPrimaryColor,
     useMaterial3: true,
     brightness: Brightness.dark,
   );
