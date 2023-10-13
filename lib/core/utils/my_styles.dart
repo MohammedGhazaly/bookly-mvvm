@@ -16,8 +16,7 @@ abstract class MyStyles {
   );
   static final textStyle20 = TextStyle(
     fontSize: 20.sp,
-    fontWeight: FontWeight.normal,
-    fontFamily: "GT Sectra Fine",
+    fontWeight: FontWeight.bold,
   );
   static final textStyle30 = TextStyle(
     fontSize: 30.sp,
