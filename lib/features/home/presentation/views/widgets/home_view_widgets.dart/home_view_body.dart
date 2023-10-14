@@ -1,7 +1,7 @@
 import 'package:bookly_mvvm/core/utils/my_styles.dart';
-import 'package:bookly_mvvm/features/home/presentation/views/widgets/best_seller_list_view.dart';
-import 'package:bookly_mvvm/features/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:bookly_mvvm/features/home/presentation/views/widgets/featured_books_list_view.dart';
+import 'package:bookly_mvvm/features/home/presentation/views/widgets/home_view_widgets.dart/best_seller_list_view.dart';
+import 'package:bookly_mvvm/features/home/presentation/views/widgets/home_view_widgets.dart/custom_home_view_app_bar.dart';
+import 'package:bookly_mvvm/features/home/presentation/views/widgets/home_view_widgets.dart/featured_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 30.w),
-                    child: const CustomAppBar(),
+                    child: const CustomHomeViewAppBar(),
                   ),
                   SizedBox(
                     height: 20.h,
