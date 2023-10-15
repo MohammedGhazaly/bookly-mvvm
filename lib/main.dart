@@ -14,7 +14,7 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(360, 690),
+        designSize: const Size(380, 700),
         builder: (_, context) {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
