@@ -19,22 +19,8 @@ class CustomSearchViewTextField extends StatelessWidget {
           ),
         ),
         enabled: true,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(
-            color: Colors.white.withOpacity(0.5),
-            width: 1,
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            12,
-          ),
-          borderSide: BorderSide(
-            color: Colors.white.withOpacity(0.5),
-            width: 1,
-          ),
-        ),
+        border: buildOutlinedBorder(),
+        enabledBorder: buildOutlinedBorder(),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
             12,
@@ -44,6 +30,16 @@ class CustomSearchViewTextField extends StatelessWidget {
             width: 1,
           ),
         ),
+      ),
+    );
+  }
+
+  OutlineInputBorder buildOutlinedBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(
+        color: Colors.white.withOpacity(0.5),
+        width: 1,
       ),
     );
   }
