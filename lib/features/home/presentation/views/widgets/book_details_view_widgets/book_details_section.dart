@@ -3,8 +3,8 @@ import 'package:bookly_mvvm/features/home/presentation/views/widgets/home_view_w
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BookDetailsText extends StatelessWidget {
-  const BookDetailsText({
+class BookDetailsSection extends StatelessWidget {
+  const BookDetailsSection({
     super.key,
   });
 
